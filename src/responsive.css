@@ -1,0 +1,30 @@
+@media screen and (max-width: 960px) {
+    .quote-wrapper {
+        max-width: 700px !important;
+    }
+}
+@media screen and (max-width: 740px) {
+    .quote-wrapper {
+        max-width: 550px !important;
+    }
+}
+@media screen and (max-width: 590px) {
+    .quote-wrapper {
+        max-width: 380px !important;
+    }
+}
+@media screen and (max-width: 420px) {
+    .quote-wrapper {
+        max-width: 300px !important;
+    }
+}
+@media screen and (max-width: 350px) {
+    .quote-wrapper {
+        max-width: 280px !important;
+    }
+}
+@media screen and (max-width: 340px) {
+    .quote-wrapper {
+        max-width: 240px !important;
+    }
+}

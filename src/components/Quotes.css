@@ -1,0 +1,35 @@
+.quote-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+h1 {
+    color: #5e8954;
+    font-family: 'Poppins', sans-serif;
+}
+p#author {
+    font-weight: 400;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+}
+.quote-wrapper h3 {
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #222222;
+    font-family: 'Poppins', sans-serif;
+}
+.main-wrapper button {
+    padding: 10px 10px;
+    background: #78cb66;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
