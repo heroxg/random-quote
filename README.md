@@ -1,3 +1,15 @@
+# App Title: Random Quotes
+
+The app generates random quotes and their author. To view more quotes click on the "Get Quotes" button.
+
+
+# Description
+
+Basically, the app generates random quotes on button click. The technologies used are React, Typescript, HTML and CSS. The quotes are being displayed using Axios. 
+
+Axios is a promised-based HTTP Client for the browser and Nodejs. it can be used to make http request from 
+nodejs. you can read more [here](https://axios-http.com/docs/intro).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +56,17 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# API Setup
+
+When you have cloned project and ran it locally, you may not be able to view the random quotes unless you do the following:
+
+## Steps:
+1. Create an account on [Rapid API](https://rapidapi.com)
+2. Search for random quotes
+3. In the code snippets section select (Nodejs)Axios
+4. Copy the snippets and paste into your code 
+
+### Note:
+
+change the 'X-RapidAPI-Key' to that of yours and you should be able to make get request the endpoint from the code snippets. 
