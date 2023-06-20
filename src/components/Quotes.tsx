@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import './Quotes.css'
+import React, { useEffect, useState } from 'react';
+import './Quotes.css';
 
 const options = {
   method: 'GET',
@@ -16,6 +16,9 @@ const Quotes = () => {
     const [data, setData] = useState("");
     const [author, setAuthor] = useState("");
     const [showAuthor, setShowAuthor] = useState(""); 
+    const [errormsg, setErrorMsg] = useState(false);
+  
+
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -30,21 +33,31 @@ const Quotes = () => {
             const response = await axios.request(options);
             setData(response.data.content);
             setShowAuthor(response.data.originator.name);
-        }catch (error) {
-            console.log(error)
+        } catch(error) {
+            // console.log(error)
+            setErrorMsg(true);
         }
     }
     fetchQuotes();
-    },[quotes, author, data, showAuthor])
+    },[quotes, author])
 
   return (
     <div className='main-wrapper'>
-        <div className='quote-wrapper'>
-            <h3>{quotes}</h3>
+        
+        {errormsg && 
+        <p className='error'>You've exhuasted the quotes you can view for now. Please, try again after some time</p>
+        }
+        <div className='quote-contents'>
+          <div className='quote-wrapper'>
+              <h3>{quotes}</h3>
+          </div>
+          <div className='qoute-info'>
+            {author && <p id="author">Originator: {author}</p>}
+            {/* <p>{loading ? "Loading" : ""}</p> */}
+            <button onClick={handleClick} disabled={errormsg ? true : false}>Get Quotes</button>
+            </div>
+          </div>
         </div>
-         {author && <p id="author">Originator: {author}</p>}
-        <button onClick={handleClick}>Get Quotes</button>
-    </div>
   )
 }
 

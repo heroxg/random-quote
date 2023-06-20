@@ -6,3 +6,7 @@
 body {
   background: #eee;
 }
+.error {
+  color: #b71f23;
+  font-weight: 400;
+}

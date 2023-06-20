@@ -33,3 +33,7 @@ p#author {
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
 }
+.main-wrapper button[disabled] {
+    cursor: not-allowed;
+    background-color: #e3e2e2;
+}
