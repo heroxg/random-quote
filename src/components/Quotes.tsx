@@ -17,16 +17,6 @@ const Quotes = () => {
         }
       };
 
-    const fetchQuotes = async () => {
-        try {
-            const response = await axios.request(options);
-            setData(response.data.content);
-            setShowAuthor(response.data.originator.name);
-        }catch (error) {
-            console.log(error)
-        }
-    }
-
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         setQuotes(data);
@@ -35,7 +25,16 @@ const Quotes = () => {
 
 
     useEffect(() => {
-        fetchQuotes();
+      const fetchQuotes = async () => {
+        try {
+            const response = await axios.request(options);
+            setData(response.data.content);
+            setShowAuthor(response.data.originator.name);
+        }catch (error) {
+            console.log(error)
+        }
+    }
+    fetchQuotes();
     },[quotes, author])
 
   return (
