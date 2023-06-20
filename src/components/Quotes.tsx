@@ -2,20 +2,20 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import './Quotes.css'
 
+const options = {
+  method: 'GET',
+  url: 'https://quotes15.p.rapidapi.com/quotes/random/',
+  headers: {
+    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
+    'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
+  }
+};
+
 const Quotes = () => {
     const [quotes, setQuotes] = useState("Success is a journey, not a destination");
     const [data, setData] = useState("");
     const [author, setAuthor] = useState("");
-    const [showAuthor, setShowAuthor] = useState("");
-
-    const options = {
-        method: 'GET',
-        url: 'https://quotes15.p.rapidapi.com/quotes/random/',
-        headers: {
-          'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
-          'X-RapidAPI-Host': 'quotes15.p.rapidapi.com'
-        }
-      };
+    const [showAuthor, setShowAuthor] = useState(""); 
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -35,7 +35,7 @@ const Quotes = () => {
         }
     }
     fetchQuotes();
-    },[quotes, author])
+    },[quotes, author, data, showAuthor])
 
   return (
     <div className='main-wrapper'>
