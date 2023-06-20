@@ -1,6 +1,7 @@
 # App Name: Random Quotes
 
 The app generates random quotes and their author. To view more quotes click on the "Get Quotes" button.
+Live [demo](https://getdailyquote.netlify.app/).
 
 
 # Tech Stack 
